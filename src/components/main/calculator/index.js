@@ -1,11 +1,15 @@
 import React, { useState } from "react";
-import Result from "../result";
+import { useContext } from "react";
+import UserContext from "../../../context/userContext";
+//
+
 export default function Calculator() {
   const [amount, setAmount] = useState("");
   const [term, setTerm] = useState("");
   const [rate, setRate] = useState("");
   const [repay, setRepay] = useState("");
   const [interest, setInterest] = useState("");
+  const { setData } = useContext(UserContext);
   // clear
   function clear() {
     setAmount("");
@@ -52,8 +56,7 @@ export default function Calculator() {
       repayment: totalRepayment.toFixed(2),
       interest: totalInterest.toFixed(2),
     };
-
-  
+    setData(data);
     console.log(data);
   }
   return (

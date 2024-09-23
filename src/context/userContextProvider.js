@@ -4,11 +4,9 @@ import { useState } from "react";
 import UserContext from "./userContext";
 
 const UserContextProvider = ({ children }) => {
-  const [amount, setAmount] = useState("");
-  const [term, setTerm] = useState("");
-  const [rate, setRate] = useState("");
+  const [data, setData] = useState("");
   return (
-    <UserContext.Provider value={{ amount, term, rate }}>
+    <UserContext.Provider value={{ data, setData }}>
       {children}
     </UserContext.Provider>
   );

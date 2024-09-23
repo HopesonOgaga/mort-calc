@@ -1,7 +1,10 @@
 import React, { useState } from "react";
-export default function Result({amount}) {
+import { useContext } from "react";
+import UserContext from "../../../context/userContext";
+export default function Result() {
   const [monthpay, setMonthPay] = useState("");
   const [termpay, setTermPay] = useState("");
+  const { data } = useContext(UserContext);
   return (
     <div className="bg-Slate_800 w-[35vw] h-[80vh] flex flex-col justify-around p-4 rounded-md shadow-md ">
       <div>
@@ -19,18 +22,16 @@ export default function Result({amount}) {
           <div className="flex flex-col gap-2">
             <p className="text-Slate_100">your monthly payments</p>
             <p className="text-cuLime text-5xl font-semibold capitalize ">
-              € 1,797.94
+            {data.interest ? data.interest : "1,797.94"}
             </p>
           </div>
-          <div className="underline border-2 border-t-2 rounded-lg border-Slate_100">
-
-          </div>
+          <div className="underline border-2 border-t-2 rounded-lg border-Slate_100"></div>
           <div className="flex flex-col gap-2">
             <p className="text-Slate_100 capitalize text-sm">
               total you will repay over the term
             </p>
             <p className="text-Slate_100 font-semibold capitalize text-2xl ">
-              € {amount}
+              € {data.repayment ? data.repayment : "548,000"}
             </p>
           </div>
         </div>
