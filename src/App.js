@@ -1,6 +1,7 @@
 import Main from "./components/main";
+import { useState } from "react";
+function App({}) {
 
-function App() {
   return <div className="">
     <Main></Main>
   </div>;

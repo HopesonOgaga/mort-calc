@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import Result from "../result";
 export default function Calculator() {
   const [amount, setAmount] = useState("");
   const [term, setTerm] = useState("");
@@ -53,6 +53,7 @@ export default function Calculator() {
       interest: totalInterest.toFixed(2),
     };
 
+  
     console.log(data);
   }
   return (

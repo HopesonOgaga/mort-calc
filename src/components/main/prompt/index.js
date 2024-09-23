@@ -11,7 +11,7 @@ export default function Prompt() {
           {" "}
           result shown here
         </p>
-        <p className="text-Slate_100 font-mono text-sm text-center ">
+        <p className="text-Slate_100 font-mono text-sm text-center  ">
           complete the form and click, calculate repayment to see what your
           monthly repayment would be
         </p>

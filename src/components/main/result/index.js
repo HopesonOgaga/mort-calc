@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-
-export default function Result() {
+export default function Result({amount}) {
   const [monthpay, setMonthPay] = useState("");
   const [termpay, setTermPay] = useState("");
   return (
@@ -31,7 +30,7 @@ export default function Result() {
               total you will repay over the term
             </p>
             <p className="text-Slate_100 font-semibold capitalize text-2xl ">
-              € 539,322.94
+              € {amount}
             </p>
           </div>
         </div>
